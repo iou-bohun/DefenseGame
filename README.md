@@ -12,6 +12,9 @@
  * 부모 프리팹의 속성을 변경할 경우 자식 프리팹도 같이 변경된다.
  * <img width="183" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/640c070a-064b-49c4-88c6-47d91d4c8233">
  * Variant 프리팹의 Variant 프리팹을 만드는것도 가능하다.
+   #### 변경된 타일
+   <img width="537" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/02613dfc-a93e-482d-a80d-1888d4cf77f8">
+
 ## 적 이동
  * 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
  * startValue와 EndValue를 Percent로 보간한다.
