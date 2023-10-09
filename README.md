@@ -36,6 +36,9 @@
  * Particle System
  * Collision모듈, Renderer모듈 Emmision모듈을 활성화 해주었다.
  * Collision모듈을 통해 파티클의 충돌을 설정해 주었고
+   * ``` private void OnParticleCollision(GameObject other) ```
+   * Collision모듈의 Send Collision Messages = (OnParticleCollision 함수를 통해 스크립트에서 파티클 충돌을 감지할 수 있게 해준다) 를 활성화 해준다.  
  * Renderer모듈을 통해 파티클 모양의 Mesh를 설정해 주었다.
    <img width="1277" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/9f84e235-ab91-42de-aec8-a97b240f3334">
+   
 
