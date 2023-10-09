@@ -22,7 +22,8 @@
   <img width="211" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/05d68e17-caf6-405c-bc34-ae100171b705"> 지정된 경로 
 
  ### 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
- * startValue와 EndValue를 Percent로 보간한다.
+ * startValue와 EndValue를 Percent로 보간한다.\
+ * 선형 보간을 이용해 적이 부드럽게 움직이도록 해주었다. 
    #### 코드
  * ``` c#
    foreach( WayPoint wayPoint in path )
