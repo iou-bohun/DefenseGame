@@ -1,4 +1,4 @@
-# Realm Rush 디펜스 게임 
+![제목 없는 동영상 - Clipchamp로 제작](https://github.com/iou-bohun/DefenseGame/assets/56661597/e6321461-acd8-46a7-88d4-84939770ce45)# Realm Rush 디펜스 게임 
 ----------------------
 ## 타일 배치 
   * [ExcuteAlways]
@@ -16,7 +16,9 @@
    <img width="537" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/02613dfc-a93e-482d-a80d-1888d4cf77f8">
 
 ## 적 이동
- * 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
+  ![제목 없는 동영상 - Clipchamp로 제작](https://github.com/iou-bohun/DefenseGame/assets/56661597/05e32be7-0d59-4ff3-b31f-176b8a9ebfde)
+ * 적이 지나다닐수 있는 경로를 ```List<WayPoint> path = new List<WayPoint>();``` 리스트로 지정해준다.
+ ### 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
  * startValue와 EndValue를 Percent로 보간한다.
    #### 코드
  * ``` c#
