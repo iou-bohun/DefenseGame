@@ -1,5 +1,4 @@
-<img width="183" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/f1550a01-f193-4fd3-94d1-911cb066bcd5"># DefenseGame //RealmRush from Udemy Cousre
-
+# Realm Rush 디펜스 게임 
 ----------------------
 ## 타일 배치 
   * [ExcuteAlways]
