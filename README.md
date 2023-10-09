@@ -1,4 +1,4 @@
-![제목 없는 동영상 - Clipchamp로 제작](https://github.com/iou-bohun/DefenseGame/assets/56661597/e6321461-acd8-46a7-88d4-84939770ce45)# Realm Rush 디펜스 게임 
+# Realm Rush 디펜스 게임 
 ----------------------
 ## 타일 배치 
   * [ExcuteAlways]
