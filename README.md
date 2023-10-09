@@ -18,6 +18,8 @@
 ## 적 이동
   ![제목 없는 동영상 - Clipchamp로 제작](https://github.com/iou-bohun/DefenseGame/assets/56661597/05e32be7-0d59-4ff3-b31f-176b8a9ebfde)
  * 적이 지나다닐수 있는 경로를 ```List<WayPoint> path = new List<WayPoint>();``` 리스트로 지정해준다.
+  <img width="211" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/05d68e17-caf6-405c-bc34-ae100171b705"> 지정된 경로 
+
  ### 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
  * startValue와 EndValue를 Percent로 보간한다.
    #### 코드
