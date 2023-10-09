@@ -50,7 +50,7 @@
    <img width="1277" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/9f84e235-ab91-42de-aec8-a97b240f3334">
 
 ## Debugging Tools
-![Uploading 제목 없는 동영상 - Clipchamp로 제작 (1).gif…]()
+![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/iou-bohun/DefenseGame/assets/56661597/c06d16c8-3e28-4122-93c9-bfe3a9b109e4)
  * 게임 화면에 표시된 지형의 좌표를 끄고 켤 수 있도록 하였다.
  * ``` public bool IsPlaceble { get { return isPlaceble; } } ``` 유니티 property기능을 이용하였다.
  * ```  waypoint = GetComponentInParent<WayPoint>(); ``` 좌표를 나타내는 스크립트에서를 GetComponentInParent를 사용하였다.
