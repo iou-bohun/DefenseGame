@@ -48,5 +48,14 @@
    * Collision모듈의 Send Collision Messages = (OnParticleCollision 함수를 통해 스크립트에서 파티클 충돌을 감지할 수 있게 해준다) 를 활성화 해준다.  
  * Renderer모듈을 통해 파티클 모양의 Mesh를 설정해 주었다.
    <img width="1277" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/9f84e235-ab91-42de-aec8-a97b240f3334">
-   
 
+## Debugging Tools
+ * 게임 화면에 표시된 지형의 좌표를 끄고 켤 수 있도록 하였다.
+ * ``` public bool IsPlaceble { get { return isPlaceble; } } ``` 유니티 property기능을 이용하였다.
+ * ```  waypoint = GetComponentInParent<WayPoint>(); ``` 좌표를 나타내는 스크립트에서를 GetComponentInParent를 사용하였다.
+    * GetComponent vs GetComponentInParent
+      * GetCopmponent 대상 오브젝트의 특정 컴포넌트들을 검색하여 모두 얻어온다.
+      * GetComponentInParent 대상 오브젝트를 포함한 부모들 중에서 특정 컴포넌트를 가진 부모 오브젝트 하나의 컴포넌트를 얻어온다.
+      * 이 게임에서 지형의 좌표를 자타내는 스크립트인 WayPoint는 모든 지형 오브젝트마다 할당이 되어있다. 이 경우 GetComponent를 사용할 경우 모든 오브젝트의 컴포넌트를 다 같이 배열의 형태로 가져오기 때문에 오류가 발생한다. 지금은 오브젝트 하나의 좌표를 나타내는 택스트를 변경하고자 하기 때문에 부모오브젝트의 컴포넌트만 가져와 이를 사용할 수 있도록 해주는 것이다. 
+        
+    
