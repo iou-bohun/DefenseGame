@@ -57,6 +57,6 @@
     * GetComponent vs GetComponentInParent
       * GetCopmponent 대상 오브젝트의 특정 컴포넌트들을 검색하여 모두 얻어온다.
       * GetComponentInParent 대상 오브젝트를 포함한 부모들 중에서 특정 컴포넌트를 가진 부모 오브젝트 하나의 컴포넌트를 얻어온다.
-      * 이 게임에서 지형의 좌표를 자타내는 스크립트인 WayPoint는 모든 지형 오브젝트마다 할당이 되어있다. 이 경우 GetComponent를 사용할 경우 모든 오브젝트의 컴포넌트를 다 같이 배열의 형태로 가져오기 때문에 오류가 발생한다. 지금은 오브젝트 하나의 좌표를 나타내는 택스트를 변경하고자 하기 때문에 부모오브젝트의 컴포넌트만 가져와 이를 사용할 수 있도록 해주는 것이다. 
+      * WayPoint 컴포넌트는 부모 오브젝트에 붙어있기 때문에 GetComponentInParent를 사용하게 된다.  
         
     
