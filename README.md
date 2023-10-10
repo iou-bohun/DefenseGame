@@ -59,4 +59,15 @@
       * GetComponentInParent 대상 오브젝트를 포함한 부모들 중에서 특정 컴포넌트를 가진 부모 오브젝트 하나의 컴포넌트를 얻어온다.
       * WayPoint 컴포넌트는 부모 오브젝트에 붙어있기 때문에 GetComponentInParent를 사용하게 된다.  
         
-    
+## 재화 시스템
+ * 로직
+   1. 적을 죽일경우 재화 증가
+   2. 적이 마지막 포인트에 도달할 경우 재화 감소
+   3. 타워 건설시 재화 감소
+* Bank오브젝트를 만들어 재화를 관리하도록 한다.
+#### FindObjectOfType vs GecComponent
+ * 기본적으로 오브젝트에는 Transform 컴포넌트가 포함되어있다.
+ * 이런 컴포넌트를 찾기 위해서는 GameObject를 알아야한다는 선행 조건이 필요하다.
+ * FindObjectOfType을 이용해 다른 오브젝트의 컴포넌트에 접근할 수 있다. 
+  
+        
