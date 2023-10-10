@@ -18,9 +18,30 @@
 ## 적 이동
 ![제목 없는 동영상 - Clipchamp로 제작](https://github.com/iou-bohun/DefenseGame/assets/56661597/05e32be7-0d59-4ff3-b31f-176b8a9ebfde)
  * 적이 지나다닐수 있는 경로를 ```List<WayPoint> path = new List<WayPoint>();``` 리스트로 지정해준다.
-   
-  <img width="211" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/05d68e17-caf6-405c-bc34-ae100171b705"> 지정된 경로 
-
+ * <img width="211" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/05d68e17-caf6-405c-bc34-ae100171b705"> 지정된 경로 
+ * /// 오류 발생 ///
+   ### 수정된 적 이동
+    * 기존의 경로 탐색에서는 경로가 무작위로 정해졌다. 각각의 경로 타일에 Path 태그를 정해준뒤 이를 탐색했는데 이는 순차적으로 탐색이 되지 않았다.
+    * 따라서 Path 태그를 각각의 타일이 아닌 경로 타일의 부모 오브젝트에 할당한다.
+    * <img width="225" alt="image" src="https://github.com/iou-bohun/DefenseGame/assets/56661597/e34dc212-71ce-44bd-82e6-29a67aee170c">
+    ``` c#
+    void FindPath()
+   {
+       path.Clear();
+       GameObject parent = GameObject.FindGameObjectWithTag("Path");
+       foreach (Transform child in parent.transform)
+       {
+          WayPoint waypoint = child.GetComponent<WayPoint>();
+           if(waypoint != null)
+           {
+               path.Add(waypoint);
+           }
+       }
+   }
+    ```
+    * GameObject가 아닌 Transform 을 사용한 이유
+    * 게임 오브젝트의 상하구조 Parent Child는 Transform에서 관리한다.
+    * 게임 오브젝트는 단순히 Wrapper로 생각하면 편하다. 
  ### 선형 보간/Lerp(Vector3 startvalue, Vector3 EndValue, float Percent)
  * startValue와 EndValue를 Percent로 보간한다.\
  * 선형 보간을 이용해 적이 부드럽게 움직이도록 해주었다. 
@@ -65,7 +86,7 @@
    2. 적이 마지막 포인트에 도달할 경우 재화 감소
    3. 타워 건설시 재화 감소
 * Bank오브젝트를 만들어 재화를 관리하도록 한다.
-#### FindObjectOfType vs GecComponent
+#### FindObjectOfType vs GetComponent
  * 기본적으로 오브젝트에는 Transform 컴포넌트가 포함되어있다.
  * 이런 컴포넌트를 찾기 위해서는 GameObject를 알아야한다는 선행 조건이 필요하다.
  * FindObjectOfType을 이용해 다른 오브젝트의 컴포넌트에 접근할 수 있다. 
