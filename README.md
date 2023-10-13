@@ -115,7 +115,59 @@
     6. 목적지에 도달하면 첫 노드까지 되돌아가며 기록
     7. 기록한 노드들 반전
   * Dictionaries
-    * 키 - 밸류 
+    * 키 - 밸류
+    * ``` Dictionary<키,value> 변수 = new Dictionry<키,value>(); ``` 와 같은 형태로 선언해준다.
+  * 구현 과정
+     * GridManager 스크립트를 만들어 Dictionary형태의 좌표 를 키로 가지고, Node를 value로 가지는 변수를 만든다.
+       ``` Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>(); ```
+     #### 사용된 GridMAnager 스크립트
+``` C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GridManager : MonoBehaviour
+{
+    [SerializeField] Vector2 gridSize;
+    Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
+
+    private void Awake()
+    {
+        CreateGrid();
+    }
+
+    /// <summary>
+    /// 그리드에 해당하는 노드 Get
+    /// </summary>
+    /// <param name="coordinates"></param>
+    /// <returns></returns>
+    public Node GetNode(Vector2Int coordinates)
+    {
+        if(grid.ContainsKey(coordinates))
+        {
+            return grid[coordinates];
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// 그리드 생성 
+    /// </summary>
+    void CreateGrid()
+    {
+        for(int x = 0; x < gridSize.x; x++)
+        {
+            for(int y = 0; y<gridSize.y; y++)
+            {
+                Vector2Int coordinates = new Vector2Int(x, y);
+                grid.Add(coordinates, new Node(coordinates,true));
+                //Debug.Log(grid[coordinates].coordinates + " = " + grid[coordinates].isWalkable);
+                
+            }
+        }
+    }
+}```
+
      
 
 
