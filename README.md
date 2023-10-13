@@ -93,7 +93,17 @@
  * 기본적으로 오브젝트에는 Transform 컴포넌트가 포함되어있다.
  * 이런 컴포넌트를 찾기 위해서는 GameObject를 알아야한다는 선행 조건이 필요하다.
  * FindObjectOfType을 이용해 다른 오브젝트의 컴포넌트에 접근할 수 있다. 
-  
+
+ ## Path Finding 알고리즘
+  1. Breadth First Search (BFS) 
+  2. Dijkstra
+  3. A*
+|알고리즘|항상 짧은길|이동 비용|다수의 시작점과 끝점|속도|
+|------|---|---|
+|BFS|O|X|O|중간|중간|
+|Dijkstra|O|O|O|느림|
+|a*|X|O|O|빠름|
+     
 
 
 -----------
