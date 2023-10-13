@@ -98,6 +98,7 @@
   1. Breadth First Search (BFS) 
   2. Dijkstra
   3. A*
+
 |알고리즘|항상 짧은길|이동 비용|다수의 시작점과 끝점|속도|
 |------|---|---|
 |BFS|O|X|O|중간|중간|
